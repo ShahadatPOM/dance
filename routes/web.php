@@ -6,10 +6,6 @@ Route::get('/', function () {
     return view('admin.login');
 })->name('user.login');
 
-// Route::get('login', function(){
-//     return view('admin.login');
-// })->name('user.login');
-
 Route::get('registration', function(){
     return view('admin.registration');
 })->name('user.registration');
