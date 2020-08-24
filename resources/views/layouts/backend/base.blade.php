@@ -29,6 +29,9 @@
 
 {{--    bootstrap 5 cdn--}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+{{--  fontawesome cdn  --}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
     @stack('base.css')
 </head>
 

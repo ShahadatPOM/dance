@@ -18,6 +18,7 @@ Route::get('admin', function(){
     return view('admin.dashboard');
 })->name('admin.dashboard');
 
+Route::group(['prefix' => 'admin'], function() {
 // School Type
 
 Route::group(['prefix' => 'schoolType', 'as' => 'schoolType.'], function() {
@@ -31,3 +32,15 @@ Route::group(['prefix' => 'schoolType', 'as' => 'schoolType.'], function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+// Role
+Route::group(['prefix' => 'role', 'as' => 'role.'], function() {
+    Route::get('/index', 'RoleController@index')->name('index');
+    Route::get('/create', 'RoleController@create')->name('create');
+    Route::post('/store', 'RoleController@store')->name('store');
+    Route::get('/edit/{id}', 'RoleController@edit')->name('edit'); 
+    Route::post('/update/{id}', 'RoleController@update')->name('update'); 
+    Route::get('/delete/{id}', 'RoleController@delete')->name('destroy'); 
+});
+});
