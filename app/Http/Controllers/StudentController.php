@@ -15,6 +15,11 @@ class StudentController extends Controller
         return view('student.index', \compact('students'));
     }
 
+    public function registration(){
+        $roles = Role::all();
+        return view('student.registration', compact('roles'));
+    }
+
     public function create(){
         $roles = Role::all();
         return view('student.create', compact('roles'));

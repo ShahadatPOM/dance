@@ -44,6 +44,7 @@ Route::group(['prefix' => 'role', 'as' => 'role.'], function() {
 // Student
 Route::group(['prefix' => 'student', 'as' => 'student.'], function() {
     Route::get('/index', 'StudentController@index')->name('index');
+    Route::get('/registration', 'StudentController@registration')->name('registration');
     Route::get('/create', 'StudentController@create')->name('create');
     Route::post('/store', 'StudentController@store')->name('store');
     Route::get('/edit/{id}', 'StudentController@edit')->name('edit'); 

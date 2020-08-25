@@ -17,7 +17,7 @@ class CreateStudentsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('nok_id');
             $table->foreign('nok_id')->references('id')->on('noks');
-            $table->unsignedBigInteger('ed_school_id');
+            $table->unsignedBigInteger('ed_school_id'); 
             $table->foreign('ed_school_id')->references('id')->on('ed_schools');
             $table->unsignedBigInteger('surgery_id');
             $table->foreign('surgery_id')->references('id')->on('surgeries');

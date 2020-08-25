@@ -52,7 +52,7 @@
                             <p>- OR -</p>
                         </div>
                         <p class="mb-0">
-                            <span class="text-center">Do not have an account?</span><a href="{{ route('user.registration') }}"><b> Sign Up Here</b></a>
+                            <span class="text-center">Do not have an account?</span><a href="{{ route('student.registration') }}"><b> Sign Up Here</b></a>
                         </p>
                     </div>
                     <!-- /.login-card-body -->

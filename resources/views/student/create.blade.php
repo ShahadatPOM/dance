@@ -91,7 +91,7 @@
                             <select class="form-control" name="ed_school_id">
                                 <option value=selected>Select School</option>
                                 <option value="1">school-1</option>
-                                <option value="0">school-2</option>
+                                <option value="2">school-2</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -99,7 +99,7 @@
                             <select class="form-control" name="nok_id">
                                 <option value=selected>Select NOK</option>
                                 <option value="1">nok-1</option>
-                                <option value="0">nok-2</option>
+                                <option value="2">nok-2</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -107,7 +107,7 @@
                             <select class="form-control" name="surgery_id">
                                 <option value=selected>Select Surgery</option>
                                 <option value="1">Surgery-1</option>
-                                <option value="0">Surgery-2</option>
+                                <option value="2">Surgery-2</option>
                             </select>
                         </div>
                         <div class="form-group">
