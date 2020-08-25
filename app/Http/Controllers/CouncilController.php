@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class EdSchoolController extends Controller
+class CouncilController extends Controller
 {
     public function index(){
         $students = Student::all();

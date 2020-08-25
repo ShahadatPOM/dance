@@ -15,6 +15,11 @@ class CreateEdSchoolsTable extends Migration
     {
         Schema::create('ed_schools', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('ed_school_type_id');
+            $table->foreign('ed_school_type_id')->references('id')->on('school_types');
+            $table->string('school_name');
+            $table->string('school_address');
+            $table->string('head_teacher');
             $table->timestamps();
         });
     }

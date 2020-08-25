@@ -12,7 +12,7 @@ class StudentController extends Controller
 {
     public function index(){
         $students = Student::all();
-        return view('student.index', \compact('students'));
+        return view('student.index', compact('students'));
     }
 
     public function registration(){
@@ -35,7 +35,7 @@ class StudentController extends Controller
             'date_terms_agreed' => 'required',
             'role_id' => 'required',
         ]);
-
+            
         $student = new Student();
         $student->first_name = $request->first_name;
         $student->last_name = $request->last_name;
@@ -48,7 +48,7 @@ class StudentController extends Controller
         $student->allergies_med = $request->allergies_med;
         $student->date_joined = $request->date_joined;
         $student->date_terms_agreed = $request->date_terms_agreed;
-        $student->status = $request->status;
+        $student->status = 0;
         $student->registration_source = $request->registration_source;
         $student->ed_school_id = $request->ed_school_id;
         $student->nok_id = $request->nok_id;
@@ -56,12 +56,24 @@ class StudentController extends Controller
         $student->role_id = $request->role_id;
         if($request->hasFile('image')){
             $image = $request->file('image');
-            
             $filename= 'image'.time() . '.'.$image->getClientOriginalExtension();
             $student->image=$filename;
             $location = public_path('image/'.$filename);
             Image::make($image)->save($location);
         }
+        $student->save();
+        return back();
+    }
+
+    public function pending($id){
+        $student = Student::findOrfail($id);
+        $student->status = 1;
+        $student->save();
+        return back();
+    }
+    public function block($id){
+        $student = Student::findOrfail($id);
+        $student->status = 0;
         $student->save();
         return back();
     }

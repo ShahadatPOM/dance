@@ -44,7 +44,7 @@
                     <input type="date" class="form-control" name="date_joined" placeholder="Enter Date Joined">
                 </div>
                 <div class="form-group">
-                    <label for="role_id">User Role</label>
+                    <label for="role_id">User Type</label>
                     <select class="form-control" name="role_id">
                         <option value=selected>Select User Role</option>
                         @foreach($roles as $role)
@@ -70,14 +70,7 @@
                     <label for="telephone">Telephone</label>
                     <input type="text" class="form-control" name="telephone" placeholder="Enter Telephone No">
                 </div>
-                <div class="form-group">
-                    <label for="status">Status</label>
-                    <select class="form-control" name="status">
-                        <option value=selected>Select Status</option>
-                        <option value="1">Active</option>
-                        <option value="0">In-Active</option>
-                    </select>
-                </div>
+                
                 <div class="form-group">
                     <label for="ed_school_id">School of Education</label>
                     <select class="form-control" name="ed_school_id">
