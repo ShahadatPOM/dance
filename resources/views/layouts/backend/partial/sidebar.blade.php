@@ -36,11 +36,18 @@
 
                 </li>
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="{{ route('role.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-universal-access"></i>
+                        <p>
+                            Roles
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('student.index') }}" class="nav-link">
                         <i class="nav-icon fa fa-users"></i>
                         <p>
-                            People
-
+                            Students
                         </p>
                     </a>
                 </li>
@@ -52,25 +59,18 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ route('role.index') }}" class="nav-link">
-                        <i class="nav-icon fa fa-universal-access"></i>
-                        <p>
-                            Roles
-                        </p>
-                    </a>
-                </li>
                 <li class="nav-header">EXAMPLES</li>
                 <li class="nav-header">
-                    <a class="btn" style="background: #F4F6F9; width: 100%; font-weight: bold; color: #343A40; text-transform: uppercase" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
+                    <a class="btn"
+                        style="background: #F4F6F9; width: 100%; font-weight: bold; color: #343A40; text-transform: uppercase"
+                        href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                        {{ __('Logout') }}
+                    </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </li>
 
             </ul>
